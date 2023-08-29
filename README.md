@@ -3,7 +3,7 @@
 <head>
 </head>
 <body>
-    <h1>Product Importer</h1>
+    <h1>APIMIO CSV Products Importer</h1>
     <p>This Laravel application allows you to import product data from an Excel file into a database, validating against unique SKUs and sending email notifications for duplicate SKUs.</p>
     <h2>Getting Started</h2>
     <h3>Prerequisites</h3>
