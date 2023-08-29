@@ -1,0 +1,84 @@
+/*.card {*/
+/*    border: 1px solid #d8d8d8;*/
+/*}*/
+
+/*body {*/
+/*    !*background-color: #f5f8fa;*!*/
+/*    background-color: #F1F5F9;*/
+/*}*/
+
+/*.image-input .image-input-wrapper {*/
+/*    border: 1px solid #d8d8d8;*/
+/*}*/
+
+/*.form-control.form-control-solid {*/
+/*    background-color: #F1F5F9;*/
+/*    border-color: #d8d8d8;*/
+/*}*/
+
+/*.form-control.form-control-solid:focus {*/
+/*    border-color: #0984e3;*/
+/*    background-color: white;*/
+/*}*/
+
+/*a {*/
+/*    color: black;*/
+/*}*/
+
+/*.modal-header {*/
+/*    padding: 0.75rem 0.75rem;*/
+/*}*/
+/*@media (min-width: 992px){*/
+/*    .header-fixed.toolbar-fixed .wrapper {*/
+/*        padding-top: calc(35px + var(--kt-toolbar-height));*/
+/*    }*/
+/*    .content {*/
+/*        padding: 5px 0;*/
+/*    }*/
+/*}*/
+
+.card {
+    /*border: 1px solid #d8d8d8;*/
+}
+
+body {
+    /*background-color: #f5f8fa;*/
+    background-color: #f1f5f9;
+}
+
+.image-input .image-input-wrapper {
+    border: 1px solid #d8d8d8;
+}
+
+.form-control.form-control-solid {
+<<<<<<< HEAD
+    background-color: #f1f5f9;
+    border-color: #d8d8d8;
+=======
+    background-color: #ffffff;
+    border-color: #efeeee;
+>>>>>>> 87b191db1ecf27f3902d0098c6cb697a5b8f114a
+}
+
+.form-control.form-control-solid:focus {
+    border-color: #0984e3;
+    background-color: white;
+}
+
+a {
+    color: black;
+}
+
+.modal-header {
+    padding: 0.75rem 0.75rem;
+}
+
+.button-no-style {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    text-align: inherit;
+    font: inherit;
+    cursor: pointer;
+}
