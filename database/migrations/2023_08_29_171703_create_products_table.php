@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('products', function (Blueprint $table) {
+         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->longText('description')->nullable();
@@ -23,7 +23,7 @@ return new class extends Migration
         });
     }
 
-    
+
     /**
      * Reverse the migrations.
      */

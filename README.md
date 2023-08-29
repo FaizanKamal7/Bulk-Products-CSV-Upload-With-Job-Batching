@@ -1,66 +1,80 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <h1>APIMIO CSV Products Importer</h1>
+    <p>This Laravel application allows you to import product data from an Excel file into a database, validating against unique SKUs and sending email notifications for duplicate SKUs.</p>
+    <h2>Getting Started</h2>
+    <h3>Prerequisites</h3>
+    <ul>
+        <li>PHP (7.3 or later)</li>
+        <li>Composer</li>
+        <li>MySQL or another database system</li>
+        <li>SMTP-enabled email account (Gmail recommended)</li>
+    </ul>
+    <h3>Installation</h3>
+    <ol>
+        <li>Clone the repository:</li>
+    </ol>
+    <pre><code>git clone https://github.com/your-username/product-importer.git
+cd product-importer</code></pre>
+    <ol start="2">
+        <li>Install the dependencies:</li>
+    </ol>
+    <pre><code>composer install</code></pre>
+    <ol start="3">
+        <li>Copy the <code>.env.example</code> file to <code>.env</code> and configure it with your environment details:</li>
+    </ol>
+    <pre><code>cp .env.example .env</code></pre>
+    <p>Update the following settings:</p>
+    <ul>
+        <li><code>DB_CONNECTION</code>, <code>DB_HOST</code>, <code>DB_PORT</code>, <code>DB_DATABASE</code>, <code>DB_USERNAME</code>, <code>DB_PASSWORD</code> for your database.</li>
+        <li><code>MAIL_MAILER</code>, <code>MAIL_HOST</code>, <code>MAIL_PORT</code>, <code>MAIL_USERNAME</code>, <code>MAIL_PASSWORD</code> for your email configuration.</li>
+    </ul>
+    <ol start="4">
+        <li>Generate the application key:</li>
+    </ol>
+    <pre><code>php artisan key:generate</code></pre>
+    <ol start="5">
+        <li>Run migrations to create the necessary database tables:</li>
+    </ol>
+    <pre><code>php artisan migrate</code></pre>
+    <ol start="6">
+        <li>Start the development server:</li>
+    </ol>
+    <pre><code>php artisan serve</code></pre>
+    <h2>Usage</h2>
+    <ol>
+        <li>Access the application by visiting <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a> in your browser.</li>
+        <li>On the web page, you can upload an Excel file containing product data. The expected CSV format is as follows:</li>
+    </ol>
+    <pre><code>CSV File Structure:
+ Your CSV file should contain the following columns:
+- Title
+- Description(body)
+- SKU(handle)
+- Type
+- Publish Status
+</code></pre>
+    <p>- Sample CSV File: You can download a sample CSV file from <a href="https://drive.google.com/file/d/1w75sayfL1aXxfKcPcQ_3jZfFTcvZKNNg/view">this link</a> to better understand the expected format.</p>
+    <p>Ensure that the CSV file has column names corresponding to the ones listed above.</p>
+    <ol start="3">
+        <li>Before importing, make sure to update the <code>.env</code> file with your custom email and password, and the database name.</li>
+        <li>Upon import, the application will validate for unique SKUs. If a duplicate SKU is found, an email notification will be sent to the configured email address (customizable in the <code>ProductImport</code> class).</li>
+    </ol>
+    <h2>Customization</h2>
+    <ul>
+        <li>Customize the validation rules, email content, and other import-related logic in the <code>ProductImport</code> class (<code>app/Imports/ProductImport.php</code>).</li>
+        <li>Customize the email content and layout in the <code>DuplicateSkuNotification</code> Mailable class (<code>app/Mail/DuplicateSkuNotification.php</code>).</li>
+    </ul>
+    <h2>Troubleshooting</h2>
+    <ul>
+        <li>If you encounter issues, ensure that you have correctly configured the <code>.env</code> file with the appropriate database and email settings.</li>
+    </ul>
+    <h2>Contributing</h2>
+    <p>Contributions are welcome! If you find a bug or have an enhancement in mind, feel free to submit a pull request.</p>
+    <h2>License</h2>
+    <p>This project is licensed under the <a href="LICENSE">MIT License</a>.</p>
+</body>
+</html>
