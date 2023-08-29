@@ -49,10 +49,15 @@ cd product-importer</code></pre>
         <li>Access the application by visiting <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a> in your browser.</li>
         <li>On the web page, you can upload an Excel file containing product data. The expected CSV format is as follows:</li>
     </ol>
-    <pre><code>title,description,sku,type,cost_price,status
-Product 1,Description 1,SKU001,TypeA,100.00,active
-Product 2,Description 2,SKU002,TypeB,200.00,inactive
-...</code></pre>
+    <pre><code>CSV File Structure:
+ Your CSV file should contain the following columns:
+- Title
+- Description(body)
+- SKU(handle)
+- Type
+- Publish Status
+</code></pre>
+    <p>- Sample CSV File: You can download a sample CSV file from <a href="https://drive.google.com/file/d/1w75sayfL1aXxfKcPcQ_3jZfFTcvZKNNg/view">this link</a> to better understand the expected format.</p>
     <p>Ensure that the CSV file has column names corresponding to the ones listed above.</p>
     <ol start="3">
         <li>Before importing, make sure to update the <code>.env</code> file with your custom email and password, and the database name.</li>
